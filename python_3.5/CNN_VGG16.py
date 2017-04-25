@@ -1,7 +1,8 @@
 import tensorflow as tf
 
 x = tf.placeholder("float", shape=[None, 224, 224, 3])
-y = tf.placeholder("float", shape=[None])
+y = tf.placeholder("float", shape=[None, 196])
+# keep_prob = tf.placeholder("float")
 
 
 def weight_variable(shape):
@@ -62,4 +63,32 @@ fc_2 = tf.nn.relu(tf.matmul(fc_1, W_fc2) + b_fc2)
 
 fc_3 = tf.nn.relu(tf.matmul(fc_2, W_fc3) + b_fc3)
 
+# h_fc_drop = tf.nn.dropout(fc_3, keep_prob)
+
 y_conv = tf.nn.softmax(tf.matmul(fc_3, W_softmax) + b_softmax)
+
+cross_entropy = -tf.reduce_sum(y*tf.log(y_conv))
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+tf.summary.scalar('cross_entropy', cross_entropy)
+tf.summary.scalar('accuracy', accuracy)
+merged_summary_op = tf.summary.merge_all()
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    saver = tf.train.Saver()
+    summar_writer = tf.train.summary.FileWriter(r'/logdir', sess.graph)
+    for step in range(20000):
+        if step % 100 == 0:
+            print('!!! Checkpoint Step = %d Created !!!' % step)
+            saver.save(sess, 'checkpoint', global_step=step)
+        if step == 50:
+            train_accuracy = accuracy.eval(feed_dict={
+                x: , y_: })
+            print("step %d, training accuracy %g" % (step, train_accuracy))
+        train_step.run(feed_dict={x: , y_: })
+        summary_str = sess.run(merged_summary_op)
+        summar_writer.add_summary(summary_str, step)
+    final_saver = tf.train.Saver()
+    final_saver.save(sess, 'graph_save')
