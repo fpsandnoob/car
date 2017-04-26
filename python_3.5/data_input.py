@@ -2,7 +2,7 @@ import os
 import tensorflow as tf
 import numpy as np
 
-class_name = os.listdir(r'F:\image_output')
+class_name = os.listdir(r'/home/fpsandnoob/image_output/')
 class_dict = {}
 for i in range(len(class_name)):
     class_dict[class_name[i]] = i
@@ -19,14 +19,14 @@ class Data:
         self._epochs_completed = 0
         self._index_in_epoch = 0
         self._num_examples = 0
-        self.data_path_dir = os.listdir(r'F:\image_output')
+        self.data_path_dir = os.listdir(r'/home/fpsandnoob/image_output/')
 
     def get_img(self):
         for dir_path in self.data_path_dir:
-            p = os.listdir("F:/image_output/" + dir_path)
+            p = os.listdir("/home/fpsandnoob/image_output/" + dir_path)
             for im in p:
                 self.data.append(tf.reshape(tf.image.convert_image_dtype(tf.image.decode_jpeg(
-                    tf.read_file(os.path.join("F:/image_output/" + dir_path, im)), channels=3),
+                    tf.read_file(os.path.join("/home/fpsandnoob/image_output/" + dir_path, im)), channels=3),
                     dtype=tf.uint8), [224, 224, 3]))
                 self.label.append([One_Hot(dir_path)])
                 self._num_examples += 1
