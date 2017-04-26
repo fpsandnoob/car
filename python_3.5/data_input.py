@@ -1,5 +1,4 @@
 import os
-import tensorflow as tf
 import numpy as np
 import cv2
 from sklearn.preprocessing import OneHotEncoder
@@ -20,6 +19,8 @@ def One_Hot(str):
 
 class Data:
     def __init__(self):
+        self.data_ = []
+        self.label_ = []
         self.data = []
         self.label = []
         self._epochs_completed = 0
@@ -43,17 +44,22 @@ class Data:
             self._epochs_completed += 1
             perm = np.arange(self._num_examples)
             np.random.shuffle(perm)
-            self.data = self.data[perm]
-            self.label = self.label[perm]
+            for i in perm:
+                self.data_.append(self.data[i])
+                self.label_.append(self.label[i])
             start = 0
             self._index_in_epoch = size
             assert size <= self._num_examples
+            end = self._index_in_epoch
+            self.data = self.data_
+            self.label = self.label_
+            return self.data_[start:end], self.label_[start:end]
         end = self._index_in_epoch
         return self.data[start:end], self.label[start:end]
 
-
 #
-d1 = Data()
-d1.get_img()
-data, label = d1.batch(2)
-print(np.shape(label))
+# d1 = Data()
+# d1.get_img()
+# for i in range(10):
+#     data, label = d1.batch(10000)
+# # print(np.shape(label))
