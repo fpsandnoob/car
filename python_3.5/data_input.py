@@ -1,15 +1,21 @@
 import os
 import tensorflow as tf
 import numpy as np
+import cv2
+from sklearn.preprocessing import OneHotEncoder
 
 class_name = os.listdir(r'/home/fpsandnoob/image_output/')
 class_dict = {}
 for i in range(len(class_name)):
     class_dict[class_name[i]] = i
+class_array = np.arange(len(class_name))
+enc = OneHotEncoder()
+enc.fit([[i] for i in class_array])
+
 
 def One_Hot(str):
     i = class_dict[str]
-    return tf.one_hot(i, 196)
+    return enc.transform(i).toarray()
 
 
 class Data:
@@ -25,11 +31,10 @@ class Data:
         for dir_path in self.data_path_dir:
             p = os.listdir("/home/fpsandnoob/image_output/" + dir_path)
             for im in p:
-                self.data.append(tf.reshape(tf.image.convert_image_dtype(tf.image.decode_jpeg(
-                    tf.read_file(os.path.join("/home/fpsandnoob/image_output/" + dir_path, im)), channels=3),
-                    dtype=tf.uint8), [224, 224, 3]))
-                self.label.append([One_Hot(dir_path)])
+                self.data.append(cv2.imread(os.path.join("/home/fpsandnoob/image_output/" + dir_path, im)))
+                self.label.append(One_Hot(dir_path))
                 self._num_examples += 1
+        print("!!!!DATA LOAD Finished!!!!")
 
     def batch(self, size):
         start = self._index_in_epoch
@@ -46,6 +51,9 @@ class Data:
         end = self._index_in_epoch
         return self.data[start:end], self.label[start:end]
 
+
+#
 d1 = Data()
 d1.get_img()
-d1.batch(10)
+data, label = d1.batch(2)
+print(np.shape(label))
