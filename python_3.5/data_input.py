@@ -53,13 +53,12 @@ class Data:
             end = self._index_in_epoch
             self.data = self.data_
             self.label = self.label_
-            return self.data_[start:end], self.label_[start:end]
+            return self.data_[start:end], self.label_[start:end][0]
         end = self._index_in_epoch
-        return self.data[start:end], self.label[start:end]
+        return self.data[start:end], self.label[start:end][0]
 
-#
+# #
 # d1 = Data()
 # d1.get_img()
-# for i in range(10):
-#     data, label = d1.batch(10000)
-# # print(np.shape(label))
+# data, label = d1.batch(10000)
+# print(np.shape(label))
