@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb58c6b0-5b65-49ba-b73a-b4f058fb5ecb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_3.5/data_input.py" afterPath="$PROJECT_DIR$/python_3.5/data_input.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" afterPath="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,9 +18,14 @@
       <file leaf-file-name="CNN_VGG16.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_3.5/CNN_VGG16.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="260">
+              <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+              <folding>
+                <element signature="e#405#485#0" expanded="false" />
+                <element signature="e#518#589#0" expanded="false" />
+                <element signature="e#620#774#0" expanded="false" />
+                <element signature="e#797#879#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,7 +33,7 @@
       <file leaf-file-name="data_input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_3.5/data_input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
+            <state relative-caret-position="322">
               <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -91,16 +96,16 @@
         <option value="$PROJECT_DIR$/python_3.5/input_data.py" />
         <option value="$PROJECT_DIR$/python_3.5/data.py" />
         <option value="$PROJECT_DIR$/python_3.5/__init__.py" />
-        <option value="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" />
         <option value="$PROJECT_DIR$/python_3.5/data_input.py" />
+        <option value="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -140,6 +145,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="python_3.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="car" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="car" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python_3.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkpoint" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493193945813</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="VGG16 net (Run Test)">
+      <created>1493200393243</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493200393243</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -353,13 +383,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.31941545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1987" y="473" width="851" height="535" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.31941545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="2007" y="502" width="851" height="535" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -424,7 +454,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -433,7 +463,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="75" column="26" lean-forward="true" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#405#485#0" expanded="false" />
+            <element signature="e#518#589#0" expanded="false" />
+            <element signature="e#620#774#0" expanded="false" />
+            <element signature="e#797#879#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,7 +476,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1340">
           <caret line="68" column="62" lean-forward="false" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-          <folding />
+          <folding>
+            <element signature="e#405#485#0" expanded="false" />
+            <element signature="e#518#589#0" expanded="false" />
+            <element signature="e#620#774#0" expanded="false" />
+            <element signature="e#797#879#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -459,7 +499,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#405#485#0" expanded="false" />
+            <element signature="e#518#589#0" expanded="false" />
+            <element signature="e#620#774#0" expanded="false" />
+            <element signature="e#797#879#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -484,7 +529,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#405#485#0" expanded="false" />
+            <element signature="e#518#589#0" expanded="false" />
+            <element signature="e#620#774#0" expanded="false" />
+            <element signature="e#797#879#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,7 +592,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python_3.5/data_input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
+        <state relative-caret-position="322">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -552,9 +602,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python_3.5/CNN_VGG16.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+          <folding>
+            <element signature="e#405#485#0" expanded="false" />
+            <element signature="e#518#589#0" expanded="false" />
+            <element signature="e#620#774#0" expanded="false" />
+            <element signature="e#797#879#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
