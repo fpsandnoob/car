@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb58c6b0-5b65-49ba-b73a-b4f058fb5ecb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" afterPath="$PROJECT_DIR$/python_3.5/CNN_VGG16.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -398,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493302498642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="VGG16 net (Run Test 1) batch_size = 64 learning_rate = 1e-7">
+      <created>1493341787800</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493341787800</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -499,7 +505,8 @@
     <MESSAGE value="VGG16 net (Final Edition on Linux with GTX 1080 and 24GB Memory)" />
     <MESSAGE value="VGG16 net (Run Test)" />
     <MESSAGE value="VGG16 net (Run Test 1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="VGG16 net (Run Test 1)" />
+    <MESSAGE value="VGG16 net (Run Test 1) batch_size = 64 learning_rate = 1e-7" />
+    <option name="LAST_COMMIT_MESSAGE" value="VGG16 net (Run Test 1) batch_size = 64 learning_rate = 1e-7" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
