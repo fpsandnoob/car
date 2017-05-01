@@ -71,11 +71,11 @@ y_conv = tf.nn.dropout(fc_3, keep_prob)
 
 # y_conv = tf.nn.softmax(tf.matmul(fc_1, W_softmax) + b_softmax)
 
-cross_entropy = tf.nn.sigmoid_cross_entropy_with_logits(logits=y_conv, labels=y)
-tf.summary.scalar('cross_entropy', tf.reduce_max(cross_entropy))
+cross_entropy = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=y_conv, labels=y))
+tf.summary.scalar('cross_entropy', tf.reduce_mean(cross_entropy))
 train_step = tf.train.AdamOptimizer(1e-7).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y, 1))
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 tf.summary.scalar('accuracy', accuracy)
 
 
